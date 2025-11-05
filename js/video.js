@@ -1,7 +1,9 @@
 var video = document.querySelector("#player1");
 
 window.addEventListener("load", function() {
-	console.log("Good job opening the window")
+	console.log("Good job opening the window");
+	document.querySelector("#volume").textContent = (video.volume * 100) + "%";
+	document.querySelector("#slider").value = video.volume * 100;
 });
 
 document.querySelector("#play").addEventListener("click", function() {
